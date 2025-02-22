@@ -2,15 +2,18 @@ def main():
     with open('books/frankenstein.txt') as f:
         file_contents = f.read()
         #print(file_contents)
+
+
+        from stats import frank_count
         num = frank_count(file_contents)
+
         print(f"{num} words found in the document")
 
+        from stats import frank_strcount
 
-def frank_count(file_contents):
-    frank1 = str(file_contents)
-    frank_str = frank1.split()
+        dict2 = frank_strcount(file_contents)
+        print(dict2)
 
-    return len(frank_str)
 
 
 main()
