@@ -36,19 +36,12 @@ def data_report(dict2):
     return sorted_counts
 
 def print_report(frank_str2):
-    print(frank_str2[0])
-    print(frank_str2[3])
-
     #it's a list of dictionaries
 
     for i in range(0, len(frank_str2)):
         dict3 = frank_str2[i]
-
-        str1 = str[dict3[0]]
-
-        num = float(dict3[1])
-        
-        frankenstring = f"{str1}: {num}"
-        print(frankenstring)
+        str3 = str(dict3)
+        str4 = str3[2] + ": " + str3[6:-1]
+        print(str4)
 
     return
